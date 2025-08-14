@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quote List (RFQ) | SHINHEE Caster</title>
+<meta name="description" content="Review items and submit your request for quotation. No payment required.">
+<link rel="icon" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="module" src="/assets/js/app.js"></script>
+</head><body>
+<div class="topbar"><div class="container"><div class="links">
+  <a href="/resources.html">Resources</a><a href="/resources.html#pdf">PDF Guides</a><a href="/blog/">Blog</a><a href="/contact.html">Contact Us</a>
+</div></div></div>
+<header class="header"><div class="container inner">
+  <a class="logo" href="/"><span class="mark"><img src="/assets/img/logo.svg" alt="logo"></span><span>SHINHEE Caster</span></a>
+  <nav class="nav">
+    <a href="/#products" style="font-weight:700">Products</a>
+    <a href="/why-shinhee.html" >Why SHINHEE</a>
+    <a href="/csr.html" >CSR</a>
+    <a href="/blog/" >Blog</a>
+    <a class="btn btn--primary" href="/quote.html">Request a Quote <span class="quote-badge">0</span></a>
+  </nav>
+</div></header>
+<main class="section"><div class="container">
+  <h1 class="h2">Your Quote List</h1>
+  <p class="muted">Review items and submit your RFQ. No payment required.</p>
+  <div id="cart-empty" class="card" style="padding:16px;display:none">Your quote list is empty. <a href="/#products">Add products →</a></div>
+  <table class="table" style="width:100%;border-collapse:collapse;margin-top:12px">
+    <thead><tr><th style="text-align:left;border-bottom:1px solid var(--line-200);padding:8px">Item</th><th style="text-align:left;border-bottom:1px solid var(--line-200);padding:8px">Qty</th><th style="text-align:left;border-bottom:1px solid var(--line-200);padding:8px">Category</th><th style="text-align:left;border-bottom:1px solid var(--line-200);padding:8px">Remove</th></tr></thead>
+    <tbody id="cart-body"></tbody>
+  </table>
+  <section class="section" style="padding-top:24px">
+    <div class="card" style="padding:16px">
+      <h2 class="h3" style="margin-bottom:8px">Submit RFQ</h2>
+      <form id="rfq-form" name="rfq" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="rfq">
+        <input type="hidden" name="items" id="rfq-items">
+        <p class="small" style="display:none"><label>Don’t fill this out <input name="bot-field"></label></p>
+        <div class="form-row">
+          <div><label>Name</label><input name="name" required></div>
+          <div><label>Email</label><input name="email" type="email" required></div>
+        </div>
+        <div class="form-row">
+          <div><label>Company</label><input name="company"></div>
+          <div><label>Country</label><input name="country"></div>
+        </div>
+        <div><label>Message</label><textarea name="message" rows="4" placeholder="Notes, specs, lead time…"></textarea></div>
+        <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+          <button class="btn btn--primary" type="submit">Send RFQ</button>
+          <span class="small muted">We’ll reply within 1 business day.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+</div></main>
+<footer class="footer section"><div class="container">
+  <div class="cols">
+    <div><div class="logo"><span class="mark"><img src="/assets/img/logo.svg" alt="logo"></span><span>SHINHEE Caster</span></div>
+      <p class="small" style="margin-top:8px">Korean-made casters for global distributors. Small-order friendly. Fast quotes. Reliable stock.</p></div>
+    <div><h4>Company</h4><ul style="list-style:none;padding:0;margin:8px 0 0">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#products">Products</a></li>
+      <li><a href="/why-shinhee.html">Why SHINHEE</a></li>
+      <li><a href="/csr.html">CSR</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul></div>
+    <div><h4>Contact</h4><p class="small">sales@shinheecaster.com<br>+82-2-000-0000<br>1234 Industrial Ave, City, State</p></div>
+  </div>
+  <div class="small" style="margin-top:24px;opacity:.9">© 2025 SHINHEE Caster. All rights reserved. · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></div>
+</div></footer>
+<script type="module" src="/assets/js/cart.js"></script>
+</body></html>
